@@ -25,6 +25,22 @@ namespace RAB_Session_02_Challenge
             Application app = uiapp.Application;
             Document doc = uidoc.Document;
 
+            // declare variables
+
+            string filePathLevels = @"S:\Personal Folders\Training Material\ArchSmarter\Revit Add-in Bootcamp\Session 02\Session 02_Room List.csv";
+            string fileText = System.IO.File.ReadAllText(filePath);
+
+            // read text file data
+
+            // loop through file data and put into lists
+
+            // remove header rows
+
+            // create levels
+
+            // get titleblock element ID
+
+            // create sheets
 
 
             return Result.Succeeded;
