@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Project Setup</Text>
+    <Description>Setup project from external data</Description>
+    <Assembly>RAB_Session-02_Challenge.dll</Assembly>
+    <FullClassName>RAB_Session_02_Challenge.cmdProjectSetup</FullClassName>
+    <ClientId>a04c7705-d62f-4ad3-8fb9-5ab739fc21e1</ClientId>
+    <VendorId>T Edward</VendorId>
+    <VendorDescription>T Edward Coder</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application RAB_Session-02_Challenge</Name>
+    <Assembly>RAB_Session-02_Challenge.dll</Assembly>
+    <FullClassName>RAB_Session_02_Challenge.App</FullClassName>
+    <ClientId>6bde6fab-f56e-4cd4-bbbc-bd6d5876d2c6</ClientId>
+    <VendorId>T Edward</VendorId>
+    <VendorDescription>T Edward Coder</VendorDescription>
+  </AddIn>
+</RevitAddIns>
