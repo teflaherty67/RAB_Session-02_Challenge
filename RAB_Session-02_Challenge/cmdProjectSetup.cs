@@ -16,6 +16,12 @@ namespace RAB_Session_02_Challenge
     [Transaction(TransactionMode.Manual)]
     public class cmdProjectSetup : IExternalCommand
     {
+        internal double ConvertMetersToFeet(double meters)
+        {
+            double feet = meters * 3.28084;
+
+            return feet;
+        }
         public Result Execute(
           ExternalCommandData commandData,
           ref string message,
@@ -70,6 +76,16 @@ namespace RAB_Session_02_Challenge
                 string stringHeight = curLevelData[1];
                 double levelHeight = 0;
                 bool convertFeet = double.TryParse(stringHeight, out levelHeight);
+
+                if(convertFeet == false)
+                {
+                    TaskDialog.Show("Error", "Could not convert value. Defaulting to 0");
+                }
+
+                string stringMeters = curLevelData[2];
+                double heightMeters = 0;
+                bool convertMeters = double.TryParse(stringMeters, out heightMeters);
+                double metersToFeet = ConvertMetersToFeet(heightMeters);
 
                 Level curLevel = Level.Create(doc, levelHeight);
                 curLevel.Name = curLevelData[0];
